@@ -1,0 +1,20 @@
+params:
+  - id: admin_username
+    type: string
+    name: "admin user name"
+    description: "the user name to login the backend"
+
+  - id: admin_password
+    type: string
+    name: "admin password"
+    description: "the password to login the backend"
+
+locales:
+  zh:
+    admin_username:
+      name: "管理员用户名"
+      description: "管理员用户名"
+
+    admin_password:
+      name: "管理员密码"
+      description: "管理员密码"
