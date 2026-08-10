@@ -3,11 +3,9 @@ application:
   background_task: true
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://con-nav-item:3000/
-
   injects:
     - id: admin-login-autofill
       when:
@@ -17,16 +15,15 @@ application:
           params:
             user: "{{ .U.admin_username }}"
             password: "{{ .U.admin_password }}"
-
 services:
   con-nav-item:
     # ghcr.io/zczy-k/smartnavora:latest
-    image: registry.lazycat.cloud/czyt/zczy-k/con-nav-item:a0d4c3d2bfa55c5a
+    # upstream: ghcr.io/zczy-k/smartnavora:latest@sha256:388d54a4e70be7cbb526a556ba90d68da95745d18e28a8efb57b416d8c571ca7
+    image: registry.lazycat.cloud/czyt/zczy-k/smartnavora:e1088acf56fda98e
     binds:
       - /lzcapp/var/data:/app/database
       - /lzcapp/var/backups:/app/backups
       - /lzcapp/var/config:/app/config
-
     environment:
       - PORT=3000 # 监听端口
       - NODE_ENV=production # 运行环境
