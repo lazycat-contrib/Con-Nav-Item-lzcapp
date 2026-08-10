@@ -1,0 +1,15 @@
+package: community.lazycat.app.con-nav-item
+version: 0.1.0
+name: Con-Nav-Item
+description: "现代化个人导航站"
+min_os_version: 1.5.0
+homepage: https://github.com/zczy-k/SmartNavora
+author: zczy-k
+
+locales:
+  zh:
+    name: "ConNavItem"
+    description: "现代化个人导航站"
+  en:
+    name: "ConNavItem"
+    description: "Modern Personal Navigation Site"

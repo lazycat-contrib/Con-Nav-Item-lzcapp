@@ -3,11 +3,15 @@ params:
     type: string
     name: "admin user name"
     description: "the user name to login the backend"
+    default_value: "admin"
+    optional: false
 
   - id: admin_password
-    type: string
+    type: secret
     name: "admin password"
     description: "the password to login the backend"
+    default_value: "$random(len=20)"
+    optional: false
 
 locales:
   zh:

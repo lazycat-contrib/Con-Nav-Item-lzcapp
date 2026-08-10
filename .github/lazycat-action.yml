@@ -1,0 +1,49 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/application.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: smartnavora
+    bump: patch
+
+build:
+  run_buildscript: false
+
+images:
+  - id: smartnavora
+    target: service
+    service: con-nav-item
+    source: ghcr.io/zczy-k/smartnavora
+    channel: custom
+    sort: created
+    tag_regex: '^latest$'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    changelog_locales: [zh, en]
+    retry:
+      enabled: false
+    application:
+      language: zh
+      name: ConNavItem
+      source: https://github.com/zczy-k/SmartNavora
+      source_author: zczy-k
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: ConNavItem
+    summary: 由 GitHub Actions 自动发布
