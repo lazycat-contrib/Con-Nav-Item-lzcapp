@@ -1,5 +1,5 @@
 package: community.lazycat.app.con-nav-item
-version: 0.1.1
+version: 0.1.2
 name: Con-Nav-Item
 description: "现代化个人导航站"
 min_os_version: 1.5.0

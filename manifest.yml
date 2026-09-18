@@ -18,8 +18,8 @@ application:
 services:
   con-nav-item:
     # ghcr.io/zczy-k/smartnavora:latest
-    # upstream: ghcr.io/zczy-k/smartnavora:latest@sha256:388d54a4e70be7cbb526a556ba90d68da95745d18e28a8efb57b416d8c571ca7
-    image: registry.lazycat.cloud/czyt/zczy-k/smartnavora:e1088acf56fda98e
+    # upstream: ghcr.io/zczy-k/smartnavora:latest@sha256:483c656100e8daf1cacdba4fd94b670415b247c1ddd4e4551095ccc726947d3d
+    image: registry.lazycat.cloud/czyt/zczy-k/smartnavora:4a2f09ad8dd1b3c4
     binds:
       - /lzcapp/var/data:/app/database
       - /lzcapp/var/backups:/app/backups
