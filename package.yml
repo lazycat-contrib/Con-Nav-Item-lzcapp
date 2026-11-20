@@ -1,6 +1,6 @@
 package: community.lazycat.app.con-nav-item
 license: Apache-2.0
-version: 0.1.4
+version: 0.1.5
 name: Con-Nav-Item
 description: "现代化个人导航站"
 min_os_version: 1.5.0
